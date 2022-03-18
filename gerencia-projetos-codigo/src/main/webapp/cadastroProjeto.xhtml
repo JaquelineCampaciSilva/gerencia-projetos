@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Gerência de Projetos</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:growl id="growl" showDetail="true" />
+        <p:growl id="growl-sticky" for="sticky-key" showDetail="true" sticky="true" />
+		<div>
+			<p:outputLabel for="id" value="ID do Projeto:" />
+			<p:inputText id="id"  value="#{cadastroProjetoBean.projeto.id}" />
+			
+			<p:outputLabel for="nome" value="Nome do Projeto:" />
+			<p:inputText id="nome"  value="#{cadastroProjetoBean.projeto.nome}" />
+
+			<p:outputLabel for="descricao" value="Descrição do Projeto:" />
+			<p:inputText id="descricao"  value="#{cadastroProjetoBean.projeto.descricao}" />
+			
+			<p:commandButton value="Voltar" action="#{cadastroProjetoBean.voltar}" ajax="false" />
+			<p:commandButton value="Cadastrar" action="#{cadastroProjetoBean.cadastrarProjeto}" ajax="false" />
+		</div>
+	</h:form>
+</h:body>
+</html>

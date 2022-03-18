@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Gerência de Projetos</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:growl id="growl" showDetail="true" />
+        <p:growl id="growl-sticky" for="sticky-key" showDetail="true" sticky="true" />
+		<div>
+			<p:outputLabel for="nomeCompleto" value="Nome Completo:" />
+			<p:inputText id="nomeCompleto"  value="#{cadastroUsuarioBean.usuario.nome}" />
+			
+			<p:outputLabel for="email" value="E-mail:" />
+			<p:inputText id="email"  value="#{cadastroUsuarioBean.usuario.email}" />
+			
+			<p:outputLabel for="nascimento" value="Data de Nascimento:" />
+			<p:datePicker id="nascimento" value="#{cadastroUsuarioBean.usuario.nascimento}" mindate="#{cadastroUsuarioBean.minDate}" maxdate="#{cadastroUsuarioBean.maxDate}" monthNavigator="true" yearNavigator="true" showWeek="true"/>
+			
+			<p:outputLabel for="telefone" value="Telefone:" />
+			<p:inputText id="telefone"  value="#{cadastroUsuarioBean.usuario.telefone}" />
+			
+			<div class="p-field p-col-12 p-md-4">
+				<p:outputLabel for="@next" value="Perfil:" />
+                <p:selectOneMenu id="option" value="#{cadastroUsuarioBean.usuario.perfil}">
+                    <f:selectItem itemLabel="Perfil" itemValue=""/>
+                    <f:selectItem itemLabel="Gerente de Projeto" itemValue="Gerente de Projeto"/>
+                    <f:selectItem itemLabel="Funcional" itemValue="Funcional"/>
+                    <f:selectItem itemLabel="Arquiteto" itemValue="Arquiteto"/>
+                    <f:selectItem itemLabel="Desenvolvedor" itemValue="Desenvolvedor"/>
+                    <f:selectItem itemLabel="QA" itemValue="QA"/>
+                </p:selectOneMenu>
+            </div>
+
+			<p:outputLabel for="senha" value="Senha:" />
+			<p:password id="senha"  value="#{cadastroUsuarioBean.usuario.senha}" />
+
+			<p:commandButton value="Voltar" action="#{cadastroUsuarioBean.voltar}" ajax="false" />
+			<p:commandButton value="Cadastrar" action="#{cadastroUsuarioBean.cadastrarUsuario}" ajax="false" />
+		</div>
+	</h:form>
+</h:body>
+</html>

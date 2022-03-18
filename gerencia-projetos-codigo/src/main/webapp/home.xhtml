@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Gerência de Projetos</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:panelGrid columns="2">
+			<p:commandButton value="Cadastrar Projeto" action="#{homeBean.irCadastroProjeto}" ajax="false" />
+			<p:commandButton value="Cadastrar Usuário" action="#{homeBean.irCadastroUsuario}" ajax="false" />
+			<p:commandButton value="Configurar Time" action="#{homeBean.irConfiguraTime}" ajax="false" />
+		</p:panelGrid>
+	</h:form>
+</h:body>
+</html>
