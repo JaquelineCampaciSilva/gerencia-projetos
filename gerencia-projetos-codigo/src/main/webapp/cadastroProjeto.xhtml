@@ -1,27 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
+	<link
+		href="#{facesContext.externalContext.requestContextPath}/css/gerenciaProjetos.css"
+		rel="stylesheet" type="text/css" />
 	<title>Gerência de Projetos</title>
 </h:head>
-
-<h:body>
+<h:body styleClass="tela_fundo">
 	<h:form>
 		<p:growl id="growl" showDetail="true" />
-        <p:growl id="growl-sticky" for="sticky-key" showDetail="true" sticky="true" />
-		<div>
-			<p:outputLabel for="id" value="ID do Projeto:" />
-			<p:inputText id="id"  value="#{cadastroProjetoBean.projeto.id}" />
-			
-			<p:outputLabel for="nome" value="Nome do Projeto:" />
-			<p:inputText id="nome"  value="#{cadastroProjetoBean.projeto.nome}" />
-
-			<p:outputLabel for="descricao" value="Descrição do Projeto:" />
-			<p:inputText id="descricao"  value="#{cadastroProjetoBean.projeto.descricao}" />
-			
-			<p:commandButton value="Voltar" action="#{cadastroProjetoBean.voltar}" ajax="false" />
-			<p:commandButton value="Cadastrar" action="#{cadastroProjetoBean.cadastrarProjeto}" ajax="false" />
+		<p:growl id="growl-sticky" for="sticky-key" showDetail="true"
+			sticky="true" />
+		<div class="nome_sistema">Gerência de Projetos</div>
+		<div class="cadastroProjeto_idProjeto_label">
+			<p:outputLabel for="id" value="ID do Projeto:"
+				styleClass="label_style" />
+		</div>
+		<div class="cadastroProjeto_idProjeto">
+			<p:inputText id="id" value="#{cadastroProjetoBean.projeto.id}"
+				styleClass="text_style" />
+		</div>
+		<div class="cadastroProjeto_nomeProjeto_label">
+			<p:outputLabel for="nome" value="Nome do Projeto:"
+				styleClass="label_style" />
+		</div>
+		<div class="cadastroProjeto_nomeProjeto">
+			<p:inputText id="nome" value="#{cadastroProjetoBean.projeto.nome}"
+				styleClass="text_style" />
+		</div>
+		<div class="cadastroProjeto_descricaoProjeto_label">
+			<p:outputLabel for="descricao" value="Descrição do Projeto:"
+				styleClass="label_style" />
+		</div>
+		<div class="cadastroProjeto_descricaoProjeto">
+			<p:inputTextarea id="descricao"
+				value="#{cadastroProjetoBean.projeto.descricao}"
+				styleClass="area_style" />
+		</div>
+		<div class="cadastroProjeto_voltar">
+			<p:commandButton value="Voltar"
+				action="#{cadastroProjetoBean.voltar}" ajax="false"
+				styleClass="botao_style" />
+		</div>
+		<div class="cadastroProjeto_cadastrar">
+			<p:commandButton value="Cadastrar"
+				action="#{cadastroProjetoBean.cadastrarProjeto}" ajax="false"
+				styleClass="botao_style" />
 		</div>
 	</h:form>
 </h:body>

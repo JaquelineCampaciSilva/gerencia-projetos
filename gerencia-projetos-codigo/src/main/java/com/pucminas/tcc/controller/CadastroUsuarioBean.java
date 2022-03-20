@@ -1,6 +1,5 @@
 package com.pucminas.tcc.controller;
 
-import java.time.LocalDate;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 
@@ -13,16 +12,11 @@ import com.pucminas.tcc.model.dao.UsuarioDAO;
 @ManagedBean
 public class CadastroUsuarioBean extends FacesBean{
 	
-	private LocalDate minDate;
-	private LocalDate maxDate;
 	private UsuarioDAO usuarioDAO = new UsuarioDAO();
 	private Usuario usuario = new Usuario();
 	private boolean sucesso = false;
 	
-	public CadastroUsuarioBean() {
-	    minDate = LocalDate.now().minusYears(100);
-	    maxDate = LocalDate.now().plusYears(1);
-	}
+	public CadastroUsuarioBean() {}
 
 	public String voltar(){
 		limparCampos();
@@ -68,22 +62,6 @@ public class CadastroUsuarioBean extends FacesBean{
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
-	}
-
-	public LocalDate getMinDate() {
-		return minDate;
-	}
-
-	public void setMinDate(LocalDate minDate) {
-		this.minDate = minDate;
-	}
-
-	public LocalDate getMaxDate() {
-		return maxDate;
-	}
-
-	public void setMaxDate(LocalDate maxDate) {
-		this.maxDate = maxDate;
 	}
 
 }

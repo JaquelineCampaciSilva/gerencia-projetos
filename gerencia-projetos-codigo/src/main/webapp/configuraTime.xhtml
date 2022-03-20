@@ -4,80 +4,121 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
+	<link
+		href="#{facesContext.externalContext.requestContextPath}/css/gerenciaProjetos.css"
+		rel="stylesheet" type="text/css" />
 	<title>Gerência de Projetos</title>
 </h:head>
-
-<h:body>
+<h:body styleClass="tela_fundo">
 	<h:form>
 		<p:growl id="growl" showDetail="true" />
-        <p:growl id="growl-sticky" for="sticky-key" showDetail="true" sticky="true" />
-		<div>
-			
-			<div class="p-field p-col-12 p-md-4">
-				<p:outputLabel for="@next" value="Projeto:" />
-                <p:selectOneMenu id="projeto" value="#{configuraTimeBean.projeto}" converter="projetoConverter">
-                    <f:selectItem itemLabel="Projeto" itemValue=""/>
-                    <f:selectItems value="#{configuraTimeBean.listaProjetos}"
-                    	var="projeto" itemLabel="#{projeto.id} - #{projeto.nome}" itemValue="#{projeto}"/>
-                </p:selectOneMenu>
-            </div>
-
-            <div class="p-field p-col-12 p-md-4">
-				<p:outputLabel for="@next" value="Gerente do Projeto:" />
-                <p:selectOneMenu id="gerente" value="#{configuraTimeBean.gerenteProjeto}" converter="usuarioConverter">
-                    <f:selectItem itemLabel="Gerente do Projeto" itemValue=""/>
-                    <f:selectItems value="#{configuraTimeBean.listaGerentes}"
-                    	var="gerente" itemLabel="#{gerente.nome}" itemValue="#{gerenteProjeto}"/>
-                </p:selectOneMenu>
-            </div>
-            
-            <div class="p-field p-col-12 p-md-4">
-				<p:outputLabel for="@next" value="Funcional:" />
-                <p:selectOneMenu id="funcional" value="#{configuraTimeBean.funcional}" converter="usuarioConverter">
-                    <f:selectItem itemLabel="Funcional" itemValue=""/>
-                    <f:selectItems value="#{configuraTimeBean.listaFuncionais}"
-                    	var="funcional" itemLabel="#{funcional.nome}" itemValue="#{funcional}"/>
-                </p:selectOneMenu>
-            </div>
-            
-            <div class="p-field p-col-12 p-md-4">
-				<p:outputLabel for="@next" value="Arquiteto:" />
-                <p:selectOneMenu id="arquiteto" value="#{configuraTimeBean.arquiteto}" converter="usuarioConverter">
-                    <f:selectItem itemLabel="Arquiteto" itemValue=""/>
-                    <f:selectItems value="#{configuraTimeBean.listaArquitetos}"
-                    	var="arquiteto" itemLabel="#{arquiteto.nome}" itemValue="#{arquiteto}"/>
-                </p:selectOneMenu>
-            </div>
-            
-            <div class="p-field p-col-12 p-md-4">
-				<p:outputLabel for="@next" value="Desenvolvedor 1:" />
-                <p:selectOneMenu id="desenvolvedor1" value="#{configuraTimeBean.desenvolvedor1}" converter="usuarioConverter">
-                    <f:selectItem itemLabel="Desenvolvedor 1" itemValue=""/>
-                    <f:selectItems value="#{configuraTimeBean.listaDesenvolvedores}"
-                    	var="desenvolvedor1" itemLabel="#{desenvolvedor1.nome}" itemValue="#{desenvolvedor1}"/>
-                </p:selectOneMenu>
-            </div>
-            
-            <div class="p-field p-col-12 p-md-4">
-				<p:outputLabel for="@next" value="Desenvolvedor 2:" />
-                <p:selectOneMenu id="desenvolvedor2" value="#{configuraTimeBean.desenvolvedor2}" converter="usuarioConverter">
-                    <f:selectItem itemLabel="Desenvolvedor 2" itemValue=""/>
-                    <f:selectItems value="#{configuraTimeBean.listaDesenvolvedores}"
-                    	var="desenvolvedor2" itemLabel="#{desenvolvedor2.nome}" itemValue="#{desenvolvedor2}"/>
-                </p:selectOneMenu>
-            </div>
-            
-            <div class="p-field p-col-12 p-md-4">
-				<p:outputLabel for="@next" value="Arquiteto QA:" />
-                <p:selectOneMenu id="arquitetoQA" value="#{configuraTimeBean.arquitetoQA}" converter="usuarioConverter">
-                    <f:selectItem itemLabel="Arquiteto QA" itemValue=""/>
-                    <f:selectItems value="#{configuraTimeBean.listaArquitetosQA}"
-                    	var="arquitetoQA" itemLabel="#{arquitetoQA.nome}" itemValue="#{arquitetoQA}"/>
-                </p:selectOneMenu>
-            </div> 
-
-			<p:commandButton value="Voltar" action="#{configuraTimeBean.voltar}" ajax="false" />
-			<p:commandButton value="Cadastrar" action="#{configuraTimeBean.configurarTime}" ajax="false" />
+		<p:growl id="growl-sticky" for="sticky-key" showDetail="true"
+			sticky="true" />
+		<div class="nome_sistema">Gerência de Projetos</div>
+		<div class="configuraTime_projeto_label">
+			<p:outputLabel for="@next" value="Projeto:" styleClass="label_style" />
+		</div>
+		<div class="p-field p-col-12 p-md-4 configuraTime_projeto">
+			<p:selectOneMenu id="projeto" value="#{configuraTimeBean.projeto}"
+				converter="projetoConverter" styleClass="text_style">
+				<f:selectItem itemLabel="Projeto" itemValue="" />
+				<f:selectItems value="#{configuraTimeBean.listaProjetos}"
+					var="projeto" itemLabel="#{projeto.id} - #{projeto.nome}"
+					itemValue="#{projeto}" />
+			</p:selectOneMenu>
+		</div>
+		<div class="configuraTime_gerenteProjeto_label">
+			<p:outputLabel for="@next" value="Gerente do Projeto:"
+				styleClass="label_style" />
+		</div>
+		<div class="p-field p-col-12 p-md-4 configuraTime_gerenteProjeto">
+			<p:selectOneMenu id="gerente"
+				value="#{configuraTimeBean.gerenteProjeto}"
+				converter="usuarioConverter" styleClass="text_style">
+				<f:selectItem itemLabel="Gerente do Projeto" itemValue="" />
+				<f:selectItems value="#{configuraTimeBean.listaGerentes}"
+					var="gerente" itemLabel="#{gerente.nome}"
+					itemValue="#{gerenteProjeto}" />
+			</p:selectOneMenu>
+		</div>
+		<div class="configuraTime_funcional_label">
+			<p:outputLabel for="@next" value="Funcional:"
+				styleClass="label_style" />
+		</div>
+		<div class="p-field p-col-12 p-md-4 configuraTime_funcional">
+			<p:selectOneMenu id="funcional"
+				value="#{configuraTimeBean.funcional}" converter="usuarioConverter"
+				styleClass="text_style">
+				<f:selectItem itemLabel="Funcional" itemValue="" />
+				<f:selectItems value="#{configuraTimeBean.listaFuncionais}"
+					var="funcional" itemLabel="#{funcional.nome}"
+					itemValue="#{funcional}" />
+			</p:selectOneMenu>
+		</div>
+		<div class="configuraTime_arquiteto_label">
+			<p:outputLabel for="@next" value="Arquiteto:"
+				styleClass="label_style" />
+		</div>
+		<div class="p-field p-col-12 p-md-4 configuraTime_arquiteto">
+			<p:selectOneMenu id="arquiteto"
+				value="#{configuraTimeBean.arquiteto}" converter="usuarioConverter"
+				styleClass="text_style">
+				<f:selectItem itemLabel="Arquiteto" itemValue="" />
+				<f:selectItems value="#{configuraTimeBean.listaArquitetos}"
+					var="arquiteto" itemLabel="#{arquiteto.nome}"
+					itemValue="#{arquiteto}" />
+			</p:selectOneMenu>
+		</div>
+		<div class="configuraTime_desenvolvedor1_label">
+			<p:outputLabel for="@next" value="Desenvolvedor 1:"
+				styleClass="label_style" />
+		</div>
+		<div class="p-field p-col-12 p-md-4 configuraTime_desenvolvedor1">
+			<p:selectOneMenu id="desenvolvedor1"
+				value="#{configuraTimeBean.desenvolvedor1}"
+				converter="usuarioConverter" styleClass="text_style">
+				<f:selectItem itemLabel="Desenvolvedor 1" itemValue="" />
+				<f:selectItems value="#{configuraTimeBean.listaDesenvolvedores}"
+					var="desenvolvedor1" itemLabel="#{desenvolvedor1.nome}"
+					itemValue="#{desenvolvedor1}" />
+			</p:selectOneMenu>
+		</div>
+		<div class="configuraTime_desenvolvedor2_label">
+			<p:outputLabel for="@next" value="Desenvolvedor 2:"
+				styleClass="label_style" />
+		</div>
+		<div class="p-field p-col-12 p-md-4 configuraTime_desenvolvedor2">
+			<p:selectOneMenu id="desenvolvedor2"
+				value="#{configuraTimeBean.desenvolvedor2}"
+				converter="usuarioConverter" styleClass="text_style">
+				<f:selectItem itemLabel="Desenvolvedor 2" itemValue="" />
+				<f:selectItems value="#{configuraTimeBean.listaDesenvolvedores}"
+					var="desenvolvedor2" itemLabel="#{desenvolvedor2.nome}"
+					itemValue="#{desenvolvedor2}" />
+			</p:selectOneMenu>
+		</div>
+		<div class="configuraTime_arquitetoQA_label">
+			<p:outputLabel for="@next" value="Arquiteto QA:"
+				styleClass="label_style" />
+		</div>
+		<div class="p-field p-col-12 p-md-4 configuraTime_arquitetoQA">
+			<p:selectOneMenu id="arquitetoQA"
+				value="#{configuraTimeBean.arquitetoQA}"
+				converter="usuarioConverter" styleClass="text_style">
+				<f:selectItem itemLabel="Arquiteto QA" itemValue="" />
+				<f:selectItems value="#{configuraTimeBean.listaArquitetosQA}"
+					var="arquitetoQA" itemLabel="#{arquitetoQA.nome}"
+					itemValue="#{arquitetoQA}" />
+			</p:selectOneMenu>
+		</div>
+		<div class="configuraTime_voltar">
+			<p:commandButton value="Voltar" action="#{configuraTimeBean.voltar}"
+				ajax="false" styleClass="botao_style" />
+		</div>
+		<div class="configuraTime_configurar">
+			<p:commandButton value="Cadastrar"
+				action="#{configuraTimeBean.configurarTime}" ajax="false"
+				styleClass="botao_style" />
 		</div>
 	</h:form>
 </h:body>
