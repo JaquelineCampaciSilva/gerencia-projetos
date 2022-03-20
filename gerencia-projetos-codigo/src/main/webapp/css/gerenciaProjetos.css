@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+.tela_fundo { 
+	background-image: url("../imagens/planoFundo.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+	
+.login_email{
+	position: fixed;
+	left: 1000px;
+	top: 300px;
+}
+
+.login_senha{
+	position: fixed;
+	left: 1000px;
+	top: 380px;
+}
+
+.login_botao{
+	position: fixed;
+	left: 1075px;
+	top: 460px;
+}
+
+.login_entrada_style{
+	height: 50px;
+	width: 300px;
+	border-style: solid;
+	border-width: 2px !important;
+	border-color: #D59696 !important;
+}
+
+.login_botao_style{
+	height: 60px;
+	width: 160px;
+	background-color: #5A799D !important;
+	border-style: none !important;
+	font-size: 24px !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.nome_sistema{
+	height: 100px;
+	background-color: #5A799D !important;
+	color: #D59696 !important;
+	text-align: center;
+	font-size: 80px !important;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.home_cadastrar_projeto{
+	position: fixed;
+	left: 500px;
+	top: 200px;
+}
+
+.home_cadastrar_usuario{
+	position: fixed;
+	left: 1075px;
+	top: 200px;
+}
+
+.home_configurar_time{
+	position: fixed;
+	left: 500px;
+	top: 300px;
+}
+
+.home_logout{
+	position: fixed;
+	left: 500px;
+	top: 600px;
+}
+
+.home_botao_style{
+	height: 60px;
+	width: 300px;
+	background-color: #5A799D !important;
+	border-style: none !important;
+	font-size: 24px !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.home_logout_style{
+	height: 60px;
+	width: 200px;
+	background-color: #5A799D !important;
+	border-style: none !important;
+	font-size: 24px !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.text_style{
+	height: 50px; 
+	width: 300px;
+	border-style: solid;
+	border-width: 2px !important;
+	border-color: #D59696 !important;
+	font-size: 16px !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	line-height: 30px;
+}
+
+.ui-inputfield.ui-widget.ui-state-default{
+	height: 50px; 
+	width: 300px;
+	border-style: solid;
+	border-width: 2px !important;
+	border-color: #D59696 !important;
+	font-size: 16px !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	line-height: 30px;
+}
+
+.area_style{
+	height: 100px; 
+	width: 800px;
+	border-style: solid;
+	border-width: 2px !important;
+	border-color: #D59696 !important;
+	font-size: 16px !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.label_style{
+	font-size: 18px !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-style: italic;
+}
+
+.botao_style{
+	height: 75px;
+	width: 250px;
+	background-color: #5A799D !important;
+	border-style: none !important;
+	font-size: 30px !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.cadastroProjeto_idProjeto_label{
+	position: fixed;
+	left: 500px;
+	top: 225px;
+}
+
+.cadastroProjeto_idProjeto{
+	position: fixed;
+	left: 500px;
+	top: 250px;
+}
+
+.cadastroProjeto_nomeProjeto_label{
+	position: fixed;
+	left: 500px;
+	top: 325px;
+}
+
+.cadastroProjeto_nomeProjeto{
+	position: fixed;
+	left: 500px;
+	top: 350px;
+}
+
+.cadastroProjeto_descricaoProjeto_label{
+	position: fixed;
+	left: 500px;
+	top: 425px;
+}
+
+.cadastroProjeto_descricaoProjeto{
+	position: fixed;
+	left: 500px;
+	top: 450px;
+}
+
+.cadastroProjeto_voltar{
+	position: fixed;
+	left: 350px;
+	top: 750px;
+}
+
+.cadastroProjeto_cadastrar{
+	position: fixed;
+	left: 1200px;
+	top: 750px;
+}
+
+.cadastroUsuario_nome_label{
+	position: fixed;
+	left: 500px;
+	top: 225px;
+}
+
+.cadastroUsuario_nome{
+	position: fixed;
+	left: 500px;
+	top: 250px;
+}
+
+.cadastroUsuario_email_label{
+	position: fixed;
+	left: 500px;
+	top: 325px;
+}
+
+.cadastroUsuario_email{
+	position: fixed;
+	left: 500px;
+	top: 350px;
+}
+
+.cadastroUsuario_nascimento_label{
+	position: fixed;
+	left: 500px;
+	top: 425px;
+}
+
+.cadastroUsuario_nascimento{
+	position: fixed;
+	left: 500px;
+	top: 450px;
+}
+
+.cadastroUsuario_telefone_label{
+	position: fixed;
+	left: 500px;
+	top: 525px;
+}
+
+.cadastroUsuario_telefone{
+	position: fixed;
+	left: 500px;
+	top: 550px;
+}
+
+.cadastroUsuario_perfil_label{
+	position: fixed;
+	left: 1020px;
+	top: 225px;
+}
+
+.cadastroUsuario_perfil{
+	position: fixed;
+	left: 1020px;
+	top: 250px;
+}
+
+.cadastroUsuario_senha_label{
+	position: fixed;
+	left: 1020px;
+	top: 325px;
+}
+
+.cadastroUsuario_senha{
+	position: fixed;
+	left: 1020px;
+	top: 350px;
+}
+
+.cadastroUsuario_voltar{
+	position: fixed;
+	left: 350px;
+	top: 750px;
+}
+
+.cadastroUsuario_cadastrar{
+	position: fixed;
+	left: 1200px;
+	top: 750px;
+}
+
+.configuraTime_projeto_label{
+	position: fixed;
+	left: 200px;
+	top: 225px;
+}
+
+.configuraTime_projeto{
+	position: fixed;
+	left: 200px;
+	top: 250px;
+}
+
+.configuraTime_gerenteProjeto_label{
+	position: fixed;
+	left: 200px;
+	top: 325px;
+}
+
+.configuraTime_gerenteProjeto{
+	position: fixed;
+	left: 200px;
+	top: 350px;
+}
+
+.configuraTime_funcional_label{
+	position: fixed;
+	left: 560px;
+	top: 225px;
+}
+
+.configuraTime_funcional{
+	position: fixed;
+	left: 560px;
+	top: 250px;
+}
+
+.configuraTime_arquiteto_label{
+	position: fixed;
+	left: 560px;
+	top: 325px;
+}
+
+.configuraTime_arquiteto{
+	position: fixed;
+	left: 560px;
+	top: 350px;
+}
+
+.configuraTime_desenvolvedor1_label{
+	position: fixed;
+	left: 920px;
+	top: 225px;
+}
+
+.configuraTime_desenvolvedor1{
+	position: fixed;
+	left: 920px;
+	top: 250px;
+}
+
+.configuraTime_desenvolvedor2_label{
+	position: fixed;
+	left: 920px;
+	top: 325px;
+}
+
+.configuraTime_desenvolvedor2{
+	position: fixed;
+	left: 920px;
+	top: 350px;
+}
+
+.configuraTime_arquitetoQA_label{
+	position: fixed;
+	left: 1280px;
+	top: 225px;
+}
+
+.configuraTime_arquitetoQA{
+	position: fixed;
+	left: 1280px;
+	top: 250px;
+}
+
+.configuraTime_voltar{
+	position: fixed;
+	left: 350px;
+	top: 750px;
+}
+
+.configuraTime_configurar{
+	position: fixed;
+	left: 1200px;
+	top: 750px;
+}

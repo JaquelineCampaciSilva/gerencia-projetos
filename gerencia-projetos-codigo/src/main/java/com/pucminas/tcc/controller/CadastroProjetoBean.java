@@ -44,6 +44,7 @@ public class CadastroProjetoBean extends FacesBean{
 	private void limparCampos() {
 		projeto = new Projeto();
 	}
+	
 
 	private boolean verificaCampos(Projeto projetoInserido) {
 		

@@ -19,5 +19,9 @@ public class HomeBean {
 	public String irConfiguraTime() {
 		return "/configuraTime";
 	}
+	
+	public String logout() {
+		return "/login";
+	}
 
 }
